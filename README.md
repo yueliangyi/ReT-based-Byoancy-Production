@@ -1,5 +1,7 @@
-# ReT-based-Byoancy-Production
-On the buoyancy production term for Reynolds-averaged modelling of breaking waves
+# $Re_T$-based Byoancy Production
 
-The content will be made available upon acceptance of the manuscript.
+**Reference:**
+Yue, L., and Li, Y., 2025. On the buoyancy production term for Reynolds-averaged modeling of breaking waves. Submitted to Coastal Engineering.
+
+*The content will be made available upon acceptance of the manuscript.*
 
