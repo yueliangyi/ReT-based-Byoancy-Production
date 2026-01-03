@@ -1,7 +1,8 @@
 # $Re_T$-based Byoancy Production
 
 **Reference:**
-Yue, L., and Li, Y., 2025. On the buoyancy production term for Reynolds-averaged modeling of breaking waves. *Submitted to Coastal Engineering*.
+Yue, L., and Li, Y., 2026. On the buoyancy production term for Reynolds-averaged modelling of breaking waves. *Coastal Engineering* 205, 104935.
+DOI:https://doi.org/10.1016/j.coastaleng.2025.104935
 
-<ins>The content will be made available upon acceptance of the manuscript.</ins>
+
 
