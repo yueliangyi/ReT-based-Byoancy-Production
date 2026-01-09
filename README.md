@@ -21,9 +21,14 @@ mkdir -p $WM_PROJECT_USER_DIR/src/
 
 Move the folder to the user source code
 ```
-mv ReynoldsStressTurbulenceModels $WM_PROJECT_USER_DIR/src/
+mv TurbulenceModels $WM_PROJECT_USER_DIR/src/
 ```
 
+Go to the directory and compile the turbulence models
+```
+cd $WM_PROJECT_USER_DIR/src/TurbulenceModels
+wmake libso
+```
 
 
 
