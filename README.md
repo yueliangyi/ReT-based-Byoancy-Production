@@ -9,4 +9,21 @@ DOI: https://doi.org/10.1016/j.coastaleng.2025.104935
 
 # Installation
 
+Download the repository
+```
+git clone https://github.com/yueliangyi/ReT-based-Byoancy-Production
+```
+
+Create folder for turbulence model (if the folders already exist skip this part)
+```
+mkdir -p $WM_PROJECT_USER_DIR/src/
+```
+
+Move the folder to the user source code
+```
+mv ReynoldsStressTurbulenceModels $WM_PROJECT_USER_DIR/src/
+```
+
+
+
 
