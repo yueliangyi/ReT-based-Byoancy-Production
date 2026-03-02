@@ -30,5 +30,17 @@ cd $WM_PROJECT_USER_DIR/src/TurbulenceModels
 wmake libso
 ```
 
+# Usage
+
+In `constant/turbulenceProperties`
+
+```
+kOmegaWilcox2006HRNCoeffs
+{
+    transitionalBuoyancy  true;
+    Clim1         0.20;
+    Clim2         0.05;
+}
+```
 
 
