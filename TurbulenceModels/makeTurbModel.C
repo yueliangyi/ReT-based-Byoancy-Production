@@ -65,7 +65,10 @@ createBaseTurbulenceModel
 // RAS models
 // -------------------------------------------------------------------------- //
 
-#include "kOmegaWilcox2006HRN.H"
-makeRASModel(kOmegaWilcox2006HRN);
+#include "kOmegaSSTReTB.H"
+makeRASModel(kOmegaSSTReTB);
+
+#include "kOmegaWilcox2006ReTB.H"
+makeRASModel(kOmegaWilcox2006ReTB);
 
 // ************************************************************************* //
