@@ -32,13 +32,28 @@ wmake libso
 
 # Usage
 
-In `constant/turbulenceProperties`
+In `system/controlDict`, add
 
 ```
-kOmegaWilcox2006HRNCoeffs
+libs
+(
+  "libCFIncompressibleRASModelsV1.so"
+);
+```
+
+In `constant/turbulenceProperties`, select the desired turbulence model settings
+
+```
+kOmegaWilcox2006ReTBCoeffs
 {
     transitionalBuoyancy  true;
     Clim1         0.20;
+    Clim2         0.05;
+}
+
+kOmegaSSTReTBCoeffs
+{
+    transitionalBuoyancy  true;
     Clim2         0.05;
 }
 ```
