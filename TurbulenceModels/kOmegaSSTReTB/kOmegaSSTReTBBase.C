@@ -192,7 +192,12 @@ tmp<volScalarField::Internal> kOmegaSSTReTBBase<BasicEddyViscosityModel>::GbyNu
     const volScalarField::Internal& S2
 )
 {
-    return GbyNu0;
+    return min
+    (
+        GbyNu0,
+        (c1_/a1_)*betaStar_*omega_()
+       *max(a1_*omega_(), b1_*F2*sqrt(S2))
+    );
 }
 
 
