@@ -31,15 +31,13 @@ gradSchemes
     grad(k)         $limitedGrad;
     grad(omega)     $limitedGrad;
     grad(epsilon)   $limitedGrad;
-
-    grad(avgRho)    cellMDLimited Gauss linear 0.5;
 }
 
 divSchemes
 {
     default         none;
 
-    div(rhoPhi,U)   Gauss linearUpwindV grad(U);
+    div(rhoPhi,U)   Gauss linearUpwind grad(U);
     div(phi,alpha)  Gauss vanLeer;
     div(phirb,alpha) Gauss linear;
 
