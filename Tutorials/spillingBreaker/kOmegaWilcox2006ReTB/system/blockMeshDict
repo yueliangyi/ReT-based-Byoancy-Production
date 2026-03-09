@@ -1,0 +1,76 @@
+/*--------------------------------*- C   -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.1.1                                   |
+|   \\  /    A nd           | Web:      http://www.OpenFOAM.org               |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+convertToMeters 1.0;
+
+dt 0.3;   // thickness to the top
+db 0.4;   // thickness to the bottom
+
+L1 4.7;
+L2 15.95;
+
+N1 #calc "(($L1+$L2)/0.01)";
+N2 #calc "(($db+$dt)/0.01)";
+
+vertices
+(
+    ( #calc "-$L1"      0     #calc "-$db" )
+    ( #calc "$L2"       0     #calc "-$db" )
+    ( #calc "$L2"       0     #calc "$dt"  )
+    ( #calc "-$L1"      0     #calc "$dt"  )
+
+    ( #calc "-$L1"      0.1   #calc "-$db" )
+    ( #calc "$L2"       0.1   #calc "-$db" )
+    ( #calc "$L2"       0.1   #calc "$dt"  )
+    ( #calc "-$L1"      0.1   #calc "$dt"  )
+);
+
+blocks
+(
+    hex (0  1  5  4  3  2  6  7) blockSet1 (#calc "$N1" 1 #calc "$N2" ) simpleGrading (1 1 1)
+);
+
+patches
+(
+   patch atmosphere
+   (
+      (3  2  6  7)
+   )
+   patch inlet
+   (
+      (0  4  7  3)
+   )
+   patch outlet
+   (
+      (1  5  6  2)
+   )
+   wall bottom
+   (
+      (0  1  5  4)
+   )
+   patch front
+   (
+      (4  5  6  7)
+   )
+   patch back
+   (
+      (0  1  2  3)
+   )
+);
+
+mergePatchPairs
+(
+);
